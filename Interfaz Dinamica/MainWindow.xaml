@@ -6,14 +6,18 @@
         xmlns:local="clr-namespace:Interfaz_Dinamica"
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
-    <Grid>
-        <Label Content="Nuevo" HorizontalAlignment="Left" Margin="34,24,0,0" VerticalAlignment="Top" Width="85" Height="39" FontSize="20"/>
-        <ComboBox x:Name="comboxTitulo" HorizontalAlignment="Left" Margin="119,33,0,0" VerticalAlignment="Top" Width="150" Height="30" SelectionChanged="ComboBox_SelectionChanged">
-            <ComboBoxItem>Alumno</ComboBoxItem>
-            <ComboBoxItem>Maestro</ComboBoxItem>
-        </ComboBox>
-        <Button Content="Agregar" HorizontalAlignment="Left" Margin="304,33,0,0" VerticalAlignment="Top" Width="105" Height="30"/>
-        <Grid x:Name="grdParametrosPersona" HorizontalAlignment="Left" Height="249" Margin="59,89,0,0" VerticalAlignment="Top" Width="350"/>
+	<Grid>
+		<Label Content="Nuevo" HorizontalAlignment="Left" Margin="34,24,0,0" VerticalAlignment="Top" Width="85" Height="39" FontSize="20"/>
+		<ComboBox x:Name="comboxTitulo" HorizontalAlignment="Left" Margin="119,33,0,0" VerticalAlignment="Top" Width="150" Height="30" SelectionChanged="ComboBox_SelectionChanged">
+			<ComboBoxItem>Alumno</ComboBoxItem>
+			<ComboBoxItem>Maestro</ComboBoxItem>
+		</ComboBox>
+		<Button Content="Agregar" HorizontalAlignment="Left" Margin="304,33,0,0" VerticalAlignment="Top" Width="105" Height="30"/>
+		<Grid x:Name="grdParametrosPersona" HorizontalAlignment="Left" Height="227" Margin="61,84,0,0" VerticalAlignment="Top" Width="515"/>
+		<Button x:Name="BtnGuardar" Content="Guardar" HorizontalAlignment="Left" Margin="304,353,0,0" VerticalAlignment="Top" Width="98" Click="BtnGuardar_Click" Height="26"/>
+		<Button x:Name="BtnCancelar" HorizontalAlignment="Left" Margin="428,353,0,0" VerticalAlignment="Top" Width="87" Height="26" Click="BtnCancelar_Click" Content="Cancelar"/>
 
-    </Grid>
+
+	</Grid>
 </Window>
+

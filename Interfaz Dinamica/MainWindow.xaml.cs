@@ -23,6 +23,8 @@ namespace Interfaz_Dinamica
         public MainWindow()
         {
             InitializeComponent();
+            BtnGuardar.Visibility = Visibility.Hidden;
+            BtnCancelar.Visibility = Visibility.Hidden;
         }
 
         private void ComboBox_SelectionChanged(object sender, SelectionChangedEventArgs e)
@@ -32,11 +34,29 @@ namespace Interfaz_Dinamica
             {
                 case 0:
                     grdParametrosPersona.Children.Add(new ParametrosAlumno());
+                    BtnGuardar.Visibility = Visibility.Visible;
+                    BtnCancelar.Visibility = Visibility.Visible;
                     break;
                 case 1:
                     grdParametrosPersona.Children.Add(new ParametrosMaestro());
+                    BtnGuardar.Visibility = Visibility.Visible;
+                    BtnCancelar.Visibility = Visibility.Visible;
                     break;
             }
             }
+
+        private void BtnGuardar_Click(object sender, RoutedEventArgs e)
+        {
+            grdParametrosPersona.Children.Clear();
+            BtnGuardar.Visibility = Visibility.Hidden;
+            BtnCancelar.Visibility = Visibility.Hidden;
+        }
+
+        private void BtnCancelar_Click(object sender, RoutedEventArgs e)
+        {
+            grdParametrosPersona.Children.Clear();
+            BtnGuardar.Visibility = Visibility.Hidden;
+            BtnCancelar.Visibility = Visibility.Hidden;
+        }
     }
 }
